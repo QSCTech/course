@@ -7,5 +7,5 @@ s.connect((input('HOST:'), int(input('PORT:'))))
 
 # 按照 HTTP 协议发送标准请求包
 s.send(b"GET / HTTP/1.1\r\nHost: localhost\r\n\r\n")
-print(s.recv(1024).decode('utf-8'))
+print(s.recv(1024))
 s.close()
