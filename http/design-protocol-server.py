@@ -29,7 +29,7 @@ def tcp_link(sock, addr):
 
         if msg is None or msg.data == 'exit':
             break
-        session.send(('Hello, %s! Now is %f' % (msg.data, msg.recv_time)))
+        session.send(('Hello, %s! Now is %f' % (msg.data, msg.send_time)))
     session.close()
     print('Connection from %s:%s closed.' % addr)
 

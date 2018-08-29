@@ -17,7 +17,7 @@ while (True):
     data = input("Enter data: ")
     session.send(data)
     msg = session.recv()
-    print('%s. Now is %d' % (msg.data, msg.recv_time))
+    print('%s. Now is %d' % (msg.data, msg.send_time))
     if data == "exit":
         break
 

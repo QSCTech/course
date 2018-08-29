@@ -3,9 +3,9 @@ import socket
 
 
 class Message(object):
-    def __init__(self, data: str):
+    def __init__(self, data: str, send_time: float = time.time()):
         self.data = data
-        self.recv_time = time.time()
+        self.send_time = send_time
 
 
 class Session(object):
