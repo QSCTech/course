@@ -12,9 +12,11 @@ while (True):
 
     # 输入消息
     data = input("Enter data: ")
-    s.send(data.encode("utf-8"))
+    # s.send(data.encode("utf-8"))
+    for char in data:
+        s.send(char.encode("utf-8"))
     print(s.recv(1024).decode('utf-8'))
-    if data == "exit":
+    if data == 'exit':
         break
 
 s.close()
