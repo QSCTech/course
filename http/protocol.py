@@ -3,7 +3,9 @@ import socket
 
 
 class Message(object):
-    def __init__(self, data: str, send_time: float = time.time()):
+    def __init__(self, data: str, send_time: float = None):
+        if send_time is None:
+            send_time = time.time()
         self.data = data
         self.send_time = send_time
 
